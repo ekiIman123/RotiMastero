@@ -534,8 +534,13 @@ footer {
     padding: 3rem 0;
   }
 
-  .content,
+  .content {
+    width: 100%;
+    border: 1px solid black;
+  }
+
   aside {
+    border: 1px solid black;
     width: 100%;
   }
 }
