@@ -4,16 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".slider");
   const articles = document.querySelectorAll("article");
   const navLinks = document.querySelectorAll(".option");
-  const aside = document.getElementById("aside");
-  const listNews = document.querySelector(".list-news");
-  const footer = document.querySelector("footer");
-
-  const asideTopPosition = aside.offsetTop;
-  const footerTopPosition = footer.offsetTop;
 
   window.addEventListener("scroll", function () {
     const scrollPosition = window.scrollY + 80;
-    const windowWidth = window.innerWidth;
 
     //   masukin bg-color ke header pas di scroll
     if (scrollPosition > 70) {
@@ -41,26 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         navLinks.forEach((link) => link.classList.remove("option-active"));
       }
     });
-
-    // membuat aside fixed saat scroll melebihi posisinya
-    if (windowWidth > 768) {
-      if (scrollPosition > asideTopPosition) {
-        aside.style.position = "fixed";
-        aside.style.top = "20px";
-        aside.style.width = "19.5vw";
-        aside.style.right = "10vw";
-        aside.style.height = "85vh";
-        listNews.style.height = "73vh";
-        listNews.style.overflow = "scroll";
-      } else if (scrollPosition > footerTopPosition) {
-        aside.style.position = "absolute";
-        aside.style.top = "0";
-      } else {
-        aside.style.position = "static";
-      }
-    } else {
-      aside.style.position = "static";
-    }
   });
 
   //   animasi slider sederhana
