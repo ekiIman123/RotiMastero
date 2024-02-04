@@ -437,8 +437,8 @@ main {
 
 .text-about {
   width: 50%;
-  font-size: 28px;
   text-align: justify;
+  font-size: 18px;
   /* border: 1px solid black; */
 }
 
@@ -507,13 +507,40 @@ aside ul li a:hover {
 
 footer {
   height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: var(--primary-color);
+  padding: 2rem 0;
+  /* border: 1px solid black; */
+}
+
+.sosmed-footer {
+  padding-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  /* border: 1px solid black; */
+}
+
+.icons {
+  font-size: 32px;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.icons a {
+  color: black;
 }
 
 @media screen and (max-width: 567px) {
   .container {
     width: 95vw;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .navbar {
@@ -534,16 +561,16 @@ footer {
     padding: 3rem 0;
   }
 
-  .content {
-    width: 100%;
-  }
-
-  aside {
+  .sosmed-footer {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
   .nav-lg {
     display: none;
   }
@@ -564,5 +591,14 @@ footer {
   .text-about {
     font-size: 16px;
     width: 100%;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+    border: 1px solid black;
   }
 }
