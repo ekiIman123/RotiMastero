@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollPosition = window.scrollY + 80;
 
     //   masukin bg-color ke header pas di scroll
-    if (scrollPosition > 70) {
+    if (scrollPosition > 80) {
       header.classList.add("scrolled");
       options.forEach((option) => {
         option.style.color = "black";
