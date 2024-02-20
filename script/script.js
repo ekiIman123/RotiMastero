@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (scrollPosition > 80) {
       header.classList.add("scrolled");
       options.forEach((option) => {
-        option.style.color = "white";
+        option.style.color = "black";
       });
     } else {
       header.classList.remove("scrolled");
