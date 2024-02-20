@@ -34,8 +34,8 @@ header {
 }
 
 .scrolled {
-  background-color: var(--primary-color);
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 nav {
